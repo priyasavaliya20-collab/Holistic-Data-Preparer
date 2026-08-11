@@ -4,14 +4,12 @@
 ## 🎯 Objective
 This project builds a complete, end-to-end **data preparation pipeline** for a customer credit-risk dataset — pulling data from four different sources, cleaning it, comparing multiple imputation/outlier/encoding/scaling techniques head-to-head, and engineering business-meaningful features to make the data **ready for credit-default classification modeling**.
 
-## 📄 Problem Statement
-Customer credit data is scattered across four different sources (transactions, demographics, repayment history, economic indicators) in four different formats, with missing values, extreme income/loan outliers, and mixed numeric/categorical variable types. The task is to merge, clean, transform, and enrich this data into one consistent, model-ready table for predicting `default_flag`.
+## ♻️ WorkFlow :-
 
-The dataset contains:
-- **Transactions** — loan amount, credit score, spending ratio, default flag (`main_transactions.csv`)
-- **Customer metadata** — age, gender, region, education, employment (`customer_metadata.json`)
-- **Repayment history** — loan repayment records (`credit_risk.db` → `loan_repayment_history`)
-- **Economic indicators** — regional inflation & unemployment rate (dummy API)
+<img width="1500" height="760" alt="pic" src="https://github.com/user-attachments/assets/ec2077fa-7ef7-4d07-8b6a-0132a4e0752e" />
+
+
+
 
 ## 📂 Project Files
 | 📄 File | 📌 Description |
@@ -25,7 +23,19 @@ The dataset contains:
 | `final_customer_credit_risk_dataset.csv` | Final ML-ready dataset |
 
 ## 🛠️ Tools Used
-`pandas` · `numpy` · `sqlite3` · `scikit-learn` (SimpleImputer, KNNImputer, IterativeImputer, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler, Normalizer, OrdinalEncoder, LabelEncoder, OneHotEncoder, KMeans, ColumnTransformer, Pipeline, PowerTransformer, FunctionTransformer) · `scipy` (zscore, winsorize) · `ydata-profiling`
+
+![Python](https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/JUPYTER-4D4D4D?style=for-the-badge&logo=jupyter&logoColor=white)
+![Notebook](https://img.shields.io/badge/NOTEBOOK-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Pandas](https://img.shields.io/badge/PANDAS-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+![SQLite3](https://img.shields.io/badge/SQLITE3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Requests](https://img.shields.io/badge/REQUESTS-F7931E?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/SCIKIT--LEARN-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/MATPLOTLIB-2E2A5B?style=for-the-badge&logo=plotly&logoColor=white)
+![Seaborn](https://img.shields.io/badge/SEABORN-388E3C?style=for-the-badge&logo=python&logoColor=white)
+![YData Profiling](https://img.shields.io/badge/YDATA%20PROFILING-EC407A?style=for-the-badge&logo=databricks&logoColor=white)
 
 ## 🧬 Dataset Structure
 
@@ -40,6 +50,12 @@ The dataset contains:
 ---
 
 ## 📥 Part B: Data Acquisition & Merging
+
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/acf585c3-027d-47b7-bbe6-66050103d7b9" />
+
+
+
 
 Loaded four different formats — CSV, JSON, SQL, and API — and merged them into one table.
 
@@ -64,6 +80,13 @@ data = data.merge(economic_data, on="region", how="left")
 ---
 
 ## 🧼 Part C: Data Understanding & Cleaning
+
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/11f03109-fa8a-4942-91dc-463056ab1cb0" />
+
+
+
+
 
 Compared **five** missing-value strategies before picking the best one for each column type.
 
@@ -94,6 +117,10 @@ data_complete = data.dropna()   # 1008 → 746 rows (-26%)
 
 ## 🎯 Part D: Outlier Handling
 
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/3a66035c-a3a3-4551-966e-4e2e14976b98" />
+
+
 Compared **three** detection methods and one non-destructive treatment on `annual_income`, `loan_amount`, `credit_score`.
 
 ```python
@@ -117,6 +144,11 @@ data_winsor[col] = winsorize(data_winsor[col], limits=[0.01, 0.01], nan_policy="
 ---
 
 ## 🛠️ Part E: Feature Engineering
+
+
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/7528071a-8a55-44a5-b6bd-5b3ac9991ba3" />
+
 
 **Variable types:** 7 numeric (age, annual_income, loan_amount, credit_score, repayment_history, transaction_count, spending_ratio) + 5 categorical (gender, region, education_level, employment_type, loan_purpose).
 
@@ -143,6 +175,9 @@ data_kmeans["transaction_cluster"]    = KMeans(n_clusters=4, random_state=42, n_
 
 ## ⚖️ Part F: Feature Scaling
 
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/61dd25e8-22e8-4c6c-ad33-f5555091660b" />
+
 Compared **five** scalers side by side on the 7 numeric columns (after median imputation).
 
 ```python
@@ -158,6 +193,11 @@ RobustScaler().fit_transform(scaling_data[numeric_columns])     # median/IQR bas
 ---
 
 ## 🏗️ Part G: Feature Construction & Transformation
+
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/453290fa-11de-4ad6-8059-774bbe29ada3" />
+
+
 
 ```python
 # Skew-correcting transforms
@@ -183,6 +223,11 @@ feature_data["spending_to_income_ratio"]     = feature_data["spending_ratio"] / 
 ---
 
 ## 🚀 Part H: Final Deliverable
+
+
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/c562bf5b-b958-4cf8-b02a-7c27b720074c" />
+
 
 ```python
 final_data = data.copy()
