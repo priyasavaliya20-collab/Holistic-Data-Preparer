@@ -2,7 +2,13 @@
 <img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/f4505bd2-1de1-4609-b0c5-2b5cf4307230" />
 
 ## 🎯 Objective
-This project builds a complete, end-to-end **data preparation pipeline** for a customer credit-risk dataset — pulling data from four different sources, cleaning it, comparing multiple imputation/outlier/encoding/scaling techniques head-to-head, and engineering business-meaningful features to make the data **ready for credit-default classification modeling**.
+
+<img width="1600" height="1000" alt="pic" src="https://github.com/user-attachments/assets/8a823a6c-6c08-4207-9daf-db819c2df717" />
+
+
+
+
+
 
 ## ♻️ WorkFlow :-
 
@@ -36,6 +42,16 @@ This project builds a complete, end-to-end **data preparation pipeline** for a c
 ![Matplotlib](https://img.shields.io/badge/MATPLOTLIB-2E2A5B?style=for-the-badge&logo=plotly&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/SEABORN-388E3C?style=for-the-badge&logo=python&logoColor=white)
 ![YData Profiling](https://img.shields.io/badge/YDATA%20PROFILING-EC407A?style=for-the-badge&logo=databricks&logoColor=white)
+
+
+---
+
+## 🎬 Project Demo
+
+[![Watch Demo](https://img.shields.io/badge/Watch%20Demo-Google%20Drive-blue?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1215xHkwTyCsBinIyIcUpixhc1skNKj2z/view?usp=sharing)
+
+📹 Click the badge above to watch the complete project demonstration.
+
 
 ## 🧬 Dataset Structure
 
