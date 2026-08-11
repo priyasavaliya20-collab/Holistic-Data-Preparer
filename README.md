@@ -3,7 +3,8 @@
 
 ## 🎯 Objective
 
-<img width="1600" height="900" alt="pic" src="https://github.com/user-attachments/assets/8a823a6c-6c08-4207-9daf-db819c2df717" />
+<img width="1536" height="900" alt="pic" src="https://github.com/user-attachments/assets/26e119b5-3d63-400d-9d9d-b2d91fcd3258" />
+
 
 
 
