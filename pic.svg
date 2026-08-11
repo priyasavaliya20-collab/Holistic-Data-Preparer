@@ -18,8 +18,8 @@
       <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
 
-    <linearGradient id="icon" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2D86C0"/>
+    <linearGradient id="gear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#49A9D5"/>
       <stop offset="100%" stop-color="#0F2C4C"/>
     </linearGradient>
 
@@ -38,7 +38,7 @@
   <rect width="1100" height="220" rx="12" fill="url(#bg)"/>
 
 
-  <!-- Reference-style background bands -->
+  <!-- Subtle background bands -->
   <g opacity=".10" fill="#FFFFFF">
     <rect x="0" y="18" width="1100" height="3"/>
     <rect x="0" y="50" width="1100" height="3"/>
@@ -47,13 +47,13 @@
   </g>
 
 
-  <!-- ========================================== -->
-  <!-- OUTLIER HANDLING ICON -->
-  <!-- ========================================== -->
+  <!-- ========================================= -->
+  <!-- FEATURE ENGINEERING ICON -->
+  <!-- ========================================= -->
 
   <g transform="translate(115 108)">
 
-    <!-- Rotating analysis ring -->
+    <!-- Rotating outer ring -->
     <circle r="58"
             fill="none"
             stroke="#B9E6FA"
@@ -72,92 +72,164 @@
     </circle>
 
 
-    <!-- DATA DISTRIBUTION -->
+    <!-- INPUT FEATURE NODES -->
 
     <g stroke="#C7ECFA"
        stroke-width="2">
 
-      <!-- Baseline -->
-      <line x1="-45"
-            y1="25"
-            x2="45"
-            y2="25"/>
+      <!-- connections -->
+      <line x1="-45" y1="-32"
+            x2="-10" y2="-10"/>
 
-      <!-- Normal data points -->
-      <circle cx="-34" cy="16" r="5" fill="#2D86C0"/>
-      <circle cx="-23" cy="7"  r="5" fill="#2D86C0"/>
-      <circle cx="-12" cy="18" r="5" fill="#2D86C0"/>
-      <circle cx="0"   cy="10" r="5" fill="#2D86C0"/>
-      <circle cx="12"  cy="17" r="5" fill="#2D86C0"/>
-      <circle cx="24"  cy="8"  r="5" fill="#2D86C0"/>
-      <circle cx="35"  cy="15" r="5" fill="#2D86C0"/>
+      <line x1="-45" y1="32"
+            x2="-10" y2="10"/>
 
-      <!-- OUTLIER -->
-      <circle cx="48"
-              cy="-38"
+      <line x1="-45" y1="0"
+            x2="-10" y2="0"/>
+
+      <!-- nodes -->
+      <circle cx="-48" cy="-32"
               r="7"
-              fill="#FFFFFF"
-              filter="url(#glow)">
+              fill="#2D86C0"/>
 
-        <animate
-          attributeName="r"
-          values="6;9;6"
-          dur="1.6s"
-          repeatCount="indefinite"/>
+      <circle cx="-48" cy="0"
+              r="7"
+              fill="#2D86C0"/>
 
-      </circle>
-
-      <!-- Connection showing outlier -->
-      <line x1="35"
-            y1="15"
-            x2="48"
-            y2="-38"
-            stroke="#B9E6FA"
-            stroke-dasharray="4 4"/>
+      <circle cx="-48" cy="32"
+              r="7"
+              fill="#2D86C0"/>
 
     </g>
 
 
-    <!-- HANDLING ARROW -->
+    <!-- CENTRAL ENGINEERING GEAR -->
 
-    <path d="M48,-38
-             C68,-28 68,5 45,25"
+    <g transform="translate(12 0)"
+       filter="url(#glow)">
 
-          fill="none"
-          stroke="#D9F2FF"
-          stroke-width="3"
-          stroke-linecap="round"/>
+      <!-- Gear body -->
+      <path d="
+        M0,-31
+        L7,-25
+        L17,-27
+        L20,-17
+        L29,-11
+        L25,-2
+        L29,7
+        L20,13
+        L17,24
+        L7,22
+        L0,31
+        L-7,22
+        L-17,24
+        L-20,13
+        L-29,7
+        L-25,-2
+        L-29,-11
+        L-20,-17
+        L-17,-27
+        L-7,-25 Z"
 
-    <path d="M39,19 L45,25 L37,28"
-          fill="none"
-          stroke="#D9F2FF"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"/>
+        fill="url(#gear)"
+        stroke="#D9F2FF"
+        stroke-width="2"/>
 
 
-    <!-- Replacement / corrected point -->
+      <!-- Gear center -->
+      <circle cx="0"
+              cy="0"
+              r="12"
+              fill="#0F2C4C"
+              stroke="#D9F2FF"
+              stroke-width="2"/>
 
-    <circle cx="28"
-            cy="25"
-            r="6"
-            fill="url(#icon)"
-            stroke="#FFFFFF"
-            stroke-width="2">
 
-      <animate
-        attributeName="opacity"
-        values=".3;1;.3"
-        dur="2s"
+      <!-- Rotating inner gear -->
+      <circle cx="0"
+              cy="0"
+              r="5"
+              fill="#D9F2FF">
+
+        <animate
+          attributeName="r"
+          values="4;7;4"
+          dur="1.5s"
+          repeatCount="indefinite"/>
+
+      </circle>
+
+
+      <!-- Gear rotation -->
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="6s"
+        repeatCount="indefinite"/>
+
+    </g>
+
+
+    <!-- OUTPUT FEATURE NODES -->
+
+    <g stroke="#D9F2FF"
+       stroke-width="2">
+
+      <line x1="42" y1="-18"
+            x2="58" y2="-30"/>
+
+      <line x1="42" y1="0"
+            x2="63" y2="0"/>
+
+      <line x1="42" y1="18"
+            x2="58" y2="30"/>
+
+      <circle cx="63" cy="-30"
+              r="6"
+              fill="#2D86C0"/>
+
+      <circle cx="68" cy="0"
+              r="6"
+              fill="#2D86C0"/>
+
+      <circle cx="63" cy="30"
+              r="6"
+              fill="#2D86C0"/>
+
+    </g>
+
+
+    <!-- Moving transformation particles -->
+
+    <circle r="4"
+            fill="#FFFFFF">
+
+      <animateMotion
+        path="M-48,-32 L-10,-10 L42,-18 L63,-30"
+        dur="2.2s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+    <circle r="4"
+            fill="#B9E6FA">
+
+      <animateMotion
+        path="M-48,32 L-10,10 L42,18 L63,30"
+        dur="2.2s"
+        begin=".8s"
         repeatCount="indefinite"/>
 
     </circle>
 
 
-    <!-- Small data nodes -->
+    <!-- Small floating feature dots -->
 
-    <circle cx="-48" cy="-45"
-            r="4"
+    <circle cx="-53"
+            cy="-50"
+            r="3"
             fill="#D9F2FF">
 
       <animate
@@ -168,8 +240,9 @@
 
     </circle>
 
-    <circle cx="-55" cy="45"
-            r="4"
+    <circle cx="53"
+            cy="50"
+            r="3"
             fill="#D9F2FF">
 
       <animate
@@ -183,9 +256,9 @@
   </g>
 
 
-  <!-- ========================================== -->
+  <!-- ========================================= -->
   <!-- TITLE -->
-  <!-- ========================================== -->
+  <!-- ========================================= -->
 
   <text x="625"
         y="88"
@@ -193,25 +266,25 @@
         font-family="Arial, Helvetica, sans-serif"
         font-size="50"
         font-weight="700"
-        letter-spacing=".8"
+        letter-spacing=".7"
         fill="url(#title)">
 
-    Outlier Handling
+    Feature Engineering
 
   </text>
 
 
   <!-- Animated shine -->
-  <rect x="400"
+  <rect x="395"
         y="52"
-        width="80"
+        width="85"
         height="48"
         fill="#FFFFFF"
         opacity=".12">
 
     <animate
       attributeName="x"
-      values="400;850;400"
+      values="395;850;395"
       dur="3.5s"
       repeatCount="indefinite"/>
 
@@ -266,7 +339,7 @@
         letter-spacing="1.2"
         fill="#D0EFFB">
 
-    Detect • Treat • Stabilize
+    Transform • Create • Optimize
 
   </text>
 
@@ -283,9 +356,18 @@
           y2="0"
           opacity=".45"/>
 
-    <circle cx="-55" cy="0" r="4" fill="#B9E6FA"/>
-    <circle cx="0" cy="0" r="4" fill="#B9E6FA"/>
-    <circle cx="55" cy="0" r="4" fill="#B9E6FA"/>
+    <circle cx="-55" cy="0"
+            r="4"
+            fill="#B9E6FA"/>
+
+    <circle cx="0" cy="0"
+            r="4"
+            fill="#B9E6FA"/>
+
+    <circle cx="55" cy="0"
+            r="4"
+            fill="#B9E6FA"/>
+
 
     <!-- Moving data point -->
     <circle cx="-55"
