@@ -1,4 +1,5 @@
-# 🧹 Customer Credit Risk — Holistic Data Preparer
+
+<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/f4505bd2-1de1-4609-b0c5-2b5cf4307230" />
 
 ## 🎯 Objective
 This project builds a complete, end-to-end **data preparation pipeline** for a customer credit-risk dataset — pulling data from four different sources, cleaning it, comparing multiple imputation/outlier/encoding/scaling techniques head-to-head, and engineering business-meaningful features to make the data **ready for credit-default classification modeling**.
