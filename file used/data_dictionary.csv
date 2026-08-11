@@ -1,0 +1,16 @@
+Field Name,Data Type,Description,Notes
+customer_id,String,Unique customer identifier,No missing values
+age,Integer,Customer age in years,5% missing
+gender,Categorical,Male / Female / Other,6% missing; mildly imbalanced
+region,Categorical,North / South / East / West,One-hot encoding
+education_level,Ordinal,Primary / Secondary / Graduate / Post-Graduate,Ordinal encoding
+employment_type,Categorical,Salaried / Self-Employed / Unemployed,5% missing
+annual_income,Float,Annual income in ₹,7% missing + extreme outliers + skew
+loan_amount,Float,Requested loan amount in ₹,Extreme outliers + skew
+loan_purpose,Categorical,Home / Car / Education / Business / Other,One-hot encoding
+credit_score,Float,Credit score from 300 to 850,6% missing + outliers
+repayment_history,Integer,Missed payments in last 12 months,Binning / outlier treatment
+transaction_count,Integer,Transactions in last 6 months,K-Means / quantile binning
+spending_ratio,Float,Spending-to-income ratio (%),Right-skewed; log/sqrt transforms
+join_date,Date,Customer joined bank,Extract year/month/day/weekday
+default_flag,Binary,"0 = No Default, 1 = Default",Target variable; imbalanced
