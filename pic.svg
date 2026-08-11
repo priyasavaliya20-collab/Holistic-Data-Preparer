@@ -1,0 +1,795 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+
+<defs>
+
+  <!-- BACKGROUND -->
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset=".55" stop-color="#f5faff"/>
+    <stop offset="1" stop-color="#e8f5ff"/>
+  </linearGradient>
+
+  <!-- BLUE -->
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#08c8f3"/>
+    <stop offset=".5" stop-color="#147ce5"/>
+    <stop offset="1" stop-color="#173ca8"/>
+  </linearGradient>
+
+  <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#123b9d"/>
+    <stop offset="1" stop-color="#061b63"/>
+  </linearGradient>
+
+  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset=".5" stop-color="#cbd9e8"/>
+    <stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+
+  <filter id="shadow">
+    <feDropShadow dx="0" dy="10" stdDeviation="12"
+                  flood-color="#1756a5" flood-opacity=".18"/>
+  </filter>
+
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="7"/>
+  </filter>
+
+</defs>
+
+
+<!-- ================================================= -->
+<!-- BACKGROUND -->
+<!-- ================================================= -->
+
+<rect width="1600" height="1000" rx="20" fill="url(#bg)"/>
+
+<!-- decorative corners -->
+<path d="M0 0H230L105 125H0Z" fill="#0d2d83"/>
+<path d="M0 0H190L70 120H0Z" fill="#1558d4"/>
+<path d="M1600 1000H1370L1510 860H1600Z" fill="#0d2d83"/>
+<path d="M1600 950H1420L1550 820H1600Z" fill="#1558d4"/>
+
+<!-- dots -->
+<g fill="#2797ef" opacity=".45">
+  <circle cx="260" cy="45" r="3"/>
+  <circle cx="280" cy="45" r="3"/>
+  <circle cx="300" cy="45" r="3"/>
+  <circle cx="320" cy="45" r="3"/>
+  <circle cx="280" cy="65" r="3"/>
+  <circle cx="300" cy="65" r="3"/>
+  <circle cx="320" cy="65" r="3"/>
+  <circle cx="340" cy="65" r="3"/>
+
+  <circle cx="1450" cy="60" r="3"/>
+  <circle cx="1470" cy="60" r="3"/>
+  <circle cx="1490" cy="60" r="3"/>
+  <circle cx="1450" cy="80" r="3"/>
+  <circle cx="1470" cy="80" r="3"/>
+  <circle cx="1490" cy="80" r="3"/>
+</g>
+
+
+<!-- ================================================= -->
+<!-- HEADER -->
+<!-- ================================================= -->
+
+<rect x="650" y="28" width="300" height="48"
+      rx="25" fill="url(#blue)"/>
+
+<text x="800" y="59"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="20"
+      font-weight="700"
+      fill="white">
+PROJECT NAME
+</text>
+
+<circle cx="625" cy="52" r="5" fill="#1468d9"/>
+<circle cx="975" cy="52" r="5" fill="#1468d9"/>
+
+<line x1="630" y1="52" x2="650" y2="52"
+      stroke="#1468d9" stroke-width="2"/>
+
+<line x1="950" y1="52" x2="970" y2="52"
+      stroke="#1468d9" stroke-width="2"/>
+
+
+<text x="800" y="130"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="56"
+      font-weight="900"
+      fill="#102e83">
+CUSTOMER CREDIT RISK
+</text>
+
+<text x="800" y="180"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="40"
+      font-weight="900"
+      fill="#1767d8">
+HOLISTIC DATA PREPARER
+</text>
+
+<line x1="450" y1="198" x2="570" y2="198"
+      stroke="#1648bd" stroke-width="3"/>
+<circle cx="575" cy="198" r="5" fill="#1648bd"/>
+
+<line x1="1030" y1="198" x2="1150" y2="198"
+      stroke="#1648bd" stroke-width="3"/>
+<circle cx="1025" cy="198" r="5" fill="#1648bd"/>
+
+
+<text x="800" y="225"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="18"
+      fill="#263c59">
+An end-to-end data preparation solution that cleans,
+</text>
+
+<text x="800" y="252"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="18"
+      fill="#263c59">
+transforms and prepares customer data for accurate
+</text>
+
+<text x="800" y="279"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="18"
+      fill="#263c59">
+credit risk analysis and data-driven decisions.
+</text>
+
+
+<!-- ================================================= -->
+<!-- LEFT CARD 01 -->
+<!-- ================================================= -->
+
+<g filter="url(#shadow)">
+
+<rect x="80" y="310" width="420" height="180"
+      rx="25" fill="white"
+      stroke="#c7e5fa" stroke-width="2"/>
+
+<rect x="55" y="330" width="115" height="115"
+      rx="25" fill="url(#blue)"/>
+
+<!-- target -->
+<circle cx="112" cy="387" r="35"
+        fill="none" stroke="white" stroke-width="7"/>
+
+<circle cx="112" cy="387" r="20"
+        fill="none" stroke="white" stroke-width="6"/>
+
+<circle cx="112" cy="387" r="7" fill="white"/>
+
+<path d="M130 360L148 342L147 361"
+      fill="none" stroke="white"
+      stroke-width="6"/>
+
+<text x="205" y="350"
+      font-family="Arial"
+      font-size="18"
+      font-weight="800"
+      fill="#075ce0">
+01  OBJECTIVE
+</text>
+
+<line x1="205" y1="365" x2="285" y2="365"
+      stroke="#1e72dd" stroke-width="3"/>
+
+<text x="205" y="402"
+      font-family="Arial"
+      font-size="15"
+      fill="#172b49">
+To build a clean, reliable and
+</text>
+
+<text x="205" y="427"
+      font-family="Arial"
+      font-size="15"
+      fill="#172b49">
+model-ready dataset for customer
+</text>
+
+<text x="205" y="452"
+      font-family="Arial"
+      font-size="15"
+      fill="#172b49">
+credit risk assessment.
+</text>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- LEFT CARD 02 -->
+<!-- ================================================= -->
+
+<g filter="url(#shadow)">
+
+<rect x="80" y="510" width="420" height="165"
+      rx="25" fill="white"
+      stroke="#c7e5fa" stroke-width="2"/>
+
+<rect x="55" y="530" width="115" height="115"
+      rx="25" fill="url(#blue)"/>
+
+<!-- database -->
+<ellipse cx="112" cy="557" rx="34" ry="14"
+         fill="white"/>
+<path d="M78 557V604Q78 618 112 618Q146 618 146 604V557"
+      fill="none" stroke="white" stroke-width="7"/>
+<path d="M78 580Q112 600 146 580"
+      fill="none" stroke="white" stroke-width="6"/>
+
+<text x="205" y="550"
+      font-family="Arial"
+      font-size="18"
+      font-weight="800"
+      fill="#075ce0">
+02  DATA ACQUISITION
+</text>
+
+<line x1="205" y1="565" x2="300" y2="565"
+      stroke="#1e72dd" stroke-width="3"/>
+
+<circle cx="210" cy="600" r="5" fill="#126de1"/>
+<text x="225" y="606"
+      font-family="Arial" font-size="14"
+      fill="#172b49">CSV / Excel Files</text>
+
+<circle cx="210" cy="627" r="5" fill="#126de1"/>
+<text x="225" y="633"
+      font-family="Arial" font-size="14"
+      fill="#172b49">JSON / SQL Sources</text>
+
+<circle cx="210" cy="654" r="5" fill="#126de1"/>
+<text x="225" y="660"
+      font-family="Arial" font-size="14"
+      fill="#172b49">APIs &amp; External Data</text>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- RIGHT CARD 03 -->
+<!-- ================================================= -->
+
+<g filter="url(#shadow)">
+
+<rect x="1100" y="310" width="420" height="180"
+      rx="25" fill="white"
+      stroke="#c7e5fa" stroke-width="2"/>
+
+<rect x="1080" y="330" width="115" height="115"
+      rx="25" fill="url(#dark)"/>
+
+<!-- magnifier -->
+<circle cx="1132" cy="378" r="27"
+        fill="none" stroke="white" stroke-width="6"/>
+<line x1="1152" y1="399"
+      x2="1170" y2="418"
+      stroke="white" stroke-width="7"
+      stroke-linecap="round"/>
+
+<path d="M1114 381L1127 370L1136 377L1150 360"
+      fill="none" stroke="#42d9ff"
+      stroke-width="5"/>
+
+<text x="1220" y="350"
+      font-family="Arial"
+      font-size="18"
+      font-weight="800"
+      fill="#075ce0">
+03  DATA UNDERSTANDING
+</text>
+
+<line x1="1220" y1="365" x2="1315" y2="365"
+      stroke="#1e72dd" stroke-width="3"/>
+
+<text x="1220" y="400"
+      font-family="Arial" font-size="14"
+      fill="#172b49">
+✓ Missing values &amp; duplicates
+</text>
+
+<text x="1220" y="426"
+      font-family="Arial" font-size="14"
+      fill="#172b49">
+✓ Data types &amp; unique values
+</text>
+
+<text x="1220" y="452"
+      font-family="Arial" font-size="14"
+      fill="#172b49">
+✓ Patterns &amp; relationships
+</text>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- RIGHT CARD 04 -->
+<!-- ================================================= -->
+
+<g filter="url(#shadow)">
+
+<rect x="1100" y="510" width="420" height="165"
+      rx="25" fill="white"
+      stroke="#c7e5fa" stroke-width="2"/>
+
+<rect x="1080" y="530" width="115" height="115"
+      rx="25" fill="url(#dark)"/>
+
+<!-- report icon -->
+<rect x="1110" y="550" width="55" height="68"
+      rx="5" fill="none"
+      stroke="white" stroke-width="5"/>
+
+<line x1="1122" y1="568" x2="1152" y2="568"
+      stroke="white" stroke-width="4"/>
+<line x1="1122" y1="582" x2="1152" y2="582"
+      stroke="white" stroke-width="4"/>
+<line x1="1122" y1="596" x2="1143" y2="596"
+      stroke="white" stroke-width="4"/>
+
+<text x="1220" y="550"
+      font-family="Arial"
+      font-size="18"
+      font-weight="800"
+      fill="#075ce0">
+04  OUTCOME
+</text>
+
+<line x1="1220" y1="565" x2="1280" y2="565"
+      stroke="#1e72dd" stroke-width="3"/>
+
+<text x="1220" y="600"
+      font-family="Arial" font-size="14"
+      fill="#172b49">
+A clean, consistent and reusable
+</text>
+
+<text x="1220" y="625"
+      font-family="Arial" font-size="14"
+      fill="#172b49">
+dataset prepared for credit risk
+</text>
+
+<text x="1220" y="650"
+      font-family="Arial" font-size="14"
+      fill="#172b49">
+analysis and ML modeling.
+</text>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- CENTER DATA PLATFORM -->
+<!-- ================================================= -->
+
+<g transform="translate(800 515)">
+
+<!-- outer rings -->
+<circle r="185" fill="none"
+        stroke="#1976e5"
+        stroke-width="2"
+        opacity=".35"/>
+
+<circle r="205" fill="none"
+        stroke="#36c9f5"
+        stroke-width="1"
+        stroke-dasharray="4 9">
+
+<animateTransform
+ attributeName="transform"
+ type="rotate"
+ from="0"
+ to="360"
+ dur="18s"
+ repeatCount="indefinite"/>
+
+</circle>
+
+<!-- orbit nodes -->
+<circle cx="0" cy="-185" r="9" fill="#12c5f0"/>
+<circle cx="185" cy="0" r="9" fill="#1769df"/>
+<circle cx="0" cy="185" r="9" fill="#12c5f0"/>
+<circle cx="-185" cy="0" r="9" fill="#1769df"/>
+
+<!-- platform shadow -->
+<ellipse cx="0" cy="100"
+         rx="165" ry="45"
+         fill="#4d8cc5" opacity=".18"/>
+
+<!-- platform -->
+<ellipse cx="0" cy="82"
+         rx="145" ry="35"
+         fill="url(#dark)"/>
+
+<ellipse cx="0" cy="70"
+         rx="125" ry="30"
+         fill="#119ee8"/>
+
+<ellipse cx="0" cy="62"
+         rx="105" ry="25"
+         fill="#063b9d"/>
+
+<!-- database body -->
+<path d="M-80 -60V70
+         Q0 105 80 70V-60Z"
+      fill="url(#silver)"
+      stroke="#bdd1e3"
+      stroke-width="2"/>
+
+<!-- database top -->
+<ellipse cx="0" cy="-60"
+         rx="80" ry="30"
+         fill="url(#silver)"
+         stroke="#b9ccdf"
+         stroke-width="2"/>
+
+<ellipse cx="0" cy="-60"
+         rx="61" ry="20"
+         fill="#087dd8"/>
+
+<ellipse cx="0" cy="-60"
+         rx="48" ry="13"
+         fill="#0a56b9"/>
+
+<!-- database lines -->
+<path d="M-80 -20Q0 15 80 -20"
+      fill="none" stroke="#a8bfd5" stroke-width="4"/>
+
+<path d="M-80 20Q0 55 80 20"
+      fill="none" stroke="#a8bfd5" stroke-width="4"/>
+
+<!-- shield -->
+<path d="M0 -15
+         L48 5
+         V48
+         Q0 90 -48 48
+         V5Z"
+      fill="url(#dark)"
+      stroke="white"
+      stroke-width="5"/>
+
+<!-- user -->
+<circle cx="0" cy="20" r="12" fill="white"/>
+<path d="M-22 50Q0 30 22 50"
+      fill="none"
+      stroke="white"
+      stroke-width="10"
+      stroke-linecap="round"/>
+
+<!-- check -->
+<circle cx="45" cy="50" r="18"
+        fill="#0bc6ee"
+        stroke="white"
+        stroke-width="4"/>
+
+<path d="M37 50L43 56L54 43"
+      fill="none"
+      stroke="white"
+      stroke-width="4"
+      stroke-linecap="round"/>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- CONNECTOR LINES -->
+<!-- ================================================= -->
+
+<g fill="none"
+   stroke="#267de2"
+   stroke-width="2">
+
+<path d="M500 400H555V445H610"/>
+<path d="M500 590H545V555H610"/>
+
+<path d="M1100 400H1045V445H990"/>
+<path d="M1100 590H1050V555H990"/>
+
+</g>
+
+<!-- animated connector dots -->
+<g fill="#12bce9">
+
+<circle r="6">
+<animateMotion path="M500 400H555V445H610"
+               dur="2s" repeatCount="indefinite"/>
+</circle>
+
+<circle r="6">
+<animateMotion path="M500 590H545V555H610"
+               dur="2.2s" repeatCount="indefinite"/>
+</circle>
+
+<circle r="6">
+<animateMotion path="M1100 400H1045V445H990"
+               dur="2s" repeatCount="indefinite"/>
+</circle>
+
+<circle r="6">
+<animateMotion path="M1100 590H1050V555H990"
+               dur="2.2s" repeatCount="indefinite"/>
+</circle>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- BOTTOM WORKFLOW -->
+<!-- ================================================= -->
+
+<g filter="url(#shadow)">
+
+<rect x="55" y="735"
+      width="1490" height="185"
+      rx="28"
+      fill="white"
+      stroke="#c4e5f7"
+      stroke-width="2"/>
+
+
+<!-- STEP 1 -->
+<g transform="translate(100 770)">
+
+<circle cx="55" cy="50" r="42"
+        fill="#e7f8ff"/>
+
+<path d="M35 58Q25 35 48 30Q62 10 80 30Q105 28 105 53Q105 72 83 72H45"
+      fill="none"
+      stroke="#1689e7"
+      stroke-width="6"/>
+
+<path d="M65 48V78M53 66L65 78L77 66"
+      fill="none"
+      stroke="#1689e7"
+      stroke-width="5"
+      stroke-linecap="round"/>
+
+<text x="120" y="40"
+      font-family="Arial"
+      font-size="17"
+      font-weight="800"
+      fill="#075ce0">
+DATA ACQUISITION
+</text>
+
+<text x="120" y="66"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+Collect customer data
+</text>
+
+<text x="120" y="88"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+from multiple sources
+</text>
+
+</g>
+
+
+<!-- arrow -->
+<path d="M370 825L405 825"
+      stroke="#1768d9"
+      stroke-width="6"/>
+<path d="M397 814L410 825L397 836"
+      fill="none"
+      stroke="#1768d9"
+      stroke-width="6"/>
+
+
+<!-- STEP 2 -->
+<g transform="translate(430 770)">
+
+<circle cx="55" cy="50" r="42"
+        fill="#e7f8ff"/>
+
+<path d="M35 65L78 25"
+      stroke="#1689e7"
+      stroke-width="8"
+      stroke-linecap="round"/>
+
+<path d="M72 22L86 36"
+      stroke="#1689e7"
+      stroke-width="8"
+      stroke-linecap="round"/>
+
+<path d="M32 70L24 82"
+      stroke="#1689e7"
+      stroke-width="5"/>
+
+<text x="120" y="40"
+      font-family="Arial"
+      font-size="17"
+      font-weight="800"
+      fill="#075ce0">
+DATA CLEANING
+</text>
+
+<text x="120" y="66"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+Handle missing values
+</text>
+
+<text x="120" y="88"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+and remove anomalies
+</text>
+
+</g>
+
+
+<!-- arrow -->
+<path d="M700 825L735 825"
+      stroke="#1768d9"
+      stroke-width="6"/>
+<path d="M727 814L740 825L727 836"
+      fill="none"
+      stroke="#1768d9"
+      stroke-width="6"/>
+
+
+<!-- STEP 3 -->
+<g transform="translate(760 770)">
+
+<circle cx="55" cy="50" r="42"
+        fill="#e7f8ff"/>
+
+<circle cx="55" cy="50" r="25"
+        fill="none"
+        stroke="#1689e7"
+        stroke-width="7"/>
+
+<path d="M55 20V10M55 90V80M25 50H15M95 50H85"
+      stroke="#1689e7"
+      stroke-width="6"/>
+
+<circle cx="55" cy="50" r="8"
+        fill="#1689e7"/>
+
+<text x="120" y="40"
+      font-family="Arial"
+      font-size="17"
+      font-weight="800"
+      fill="#075ce0">
+FEATURE ENGINEERING
+</text>
+
+<text x="120" y="66"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+Construct meaningful
+</text>
+
+<text x="120" y="88"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+features for risk analysis
+</text>
+
+</g>
+
+
+<!-- arrow -->
+<path d="M1040 825L1075 825"
+      stroke="#1768d9"
+      stroke-width="6"/>
+<path d="M1067 814L1080 825L1067 836"
+      fill="none"
+      stroke="#1768d9"
+      stroke-width="6"/>
+
+
+<!-- STEP 4 -->
+<g transform="translate(1100 770)">
+
+<circle cx="55" cy="50" r="42"
+        fill="#e7f8ff"/>
+
+<path d="M30 75V55L48 45L62 55L80 35V75"
+      fill="none"
+      stroke="#1689e7"
+      stroke-width="6"/>
+
+<path d="M30 75H82"
+      stroke="#1689e7"
+      stroke-width="5"/>
+
+<text x="120" y="40"
+      font-family="Arial"
+      font-size="17"
+      font-weight="800"
+      fill="#075ce0">
+FEATURE SCALING
+</text>
+
+<text x="120" y="66"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+Standardize feature ranges
+</text>
+
+<text x="120" y="88"
+      font-family="Arial"
+      font-size="13"
+      fill="#435a73">
+for consistent modeling
+</text>
+
+</g>
+
+
+<!-- FINAL -->
+<g transform="translate(1430 790)">
+
+<circle cx="0" cy="30" r="34"
+        fill="#e7f8ff"/>
+
+<path d="M-18 35L-7 46L18 17"
+      fill="none"
+      stroke="#1689e7"
+      stroke-width="7"
+      stroke-linecap="round"/>
+
+</g>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- FINAL FOOTER -->
+<!-- ================================================= -->
+
+<text x="800" y="965"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="14"
+      font-weight="700"
+      letter-spacing="2"
+      fill="#174a9c">
+CLEAN  •  CONSISTENT  •  TRANSFORMED  •  MODEL-READY
+</text>
+
+
+<!-- ================================================= -->
+<!-- ANIMATION -->
+<!-- ================================================= -->
+
+<circle cx="800" cy="515" r="220"
+        fill="none"
+        stroke="#19c8f0"
+        stroke-width="2"
+        opacity=".15">
+
+<animate attributeName="r"
+         values="205;225;205"
+         dur="3s"
+         repeatCount="indefinite"/>
+
+</circle>
+
+</svg>
