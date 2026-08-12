@@ -5,34 +5,27 @@
 
   <defs>
 
+    <!-- Background -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#050816"/>
-      <stop offset="48%" stop-color="#0b1230"/>
+      <stop offset="50%" stop-color="#09132f"/>
       <stop offset="100%" stop-color="#160b35"/>
     </linearGradient>
 
+    <!-- Main Accent -->
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#00e5ff"/>
       <stop offset="50%" stop-color="#7c6cff"/>
       <stop offset="100%" stop-color="#00ffc8"/>
     </linearGradient>
 
+    <!-- Violet -->
     <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="0%" stop-color="#665cff"/>
       <stop offset="100%" stop-color="#c56cff"/>
     </linearGradient>
 
-    <linearGradient id="danger" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ff4ecd"/>
-      <stop offset="50%" stop-color="#ff6b8a"/>
-      <stop offset="100%" stop-color="#ffb86c"/>
-    </linearGradient>
-
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity=".10"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity=".025"/>
-    </linearGradient>
-
+    <!-- Glow -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge>
@@ -41,95 +34,84 @@
       </feMerge>
     </filter>
 
-    <filter id="bigGlow">
-      <feGaussianBlur stdDeviation="22"/>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="18"/>
     </filter>
 
+    <!-- Grid -->
+    <pattern id="grid"
+             width="40"
+             height="40"
+             patternUnits="userSpaceOnUse">
+
+      <path d="M40 0H0V40"
+            fill="none"
+            stroke="#6d82b8"
+            stroke-opacity=".09"/>
+
+      <circle cx="0"
+              cy="0"
+              r="1.4"
+              fill="#7890c9"
+              opacity=".15"/>
+
+    </pattern>
+
     <clipPath id="clip">
-      <rect width="1100" height="260" rx="20"/>
+      <rect x="2"
+            y="2"
+            width="1096"
+            height="256"
+            rx="20"/>
     </clipPath>
 
   </defs>
 
 
+  <!-- ================================================= -->
   <!-- BACKGROUND -->
+  <!-- ================================================= -->
 
   <rect width="1100"
         height="260"
         rx="20"
         fill="url(#bg)"/>
 
-
   <g clip-path="url(#clip)">
 
+    <rect width="1100"
+          height="260"
+          fill="url(#grid)"/>
 
-    <!-- AMBIENT GLOW -->
 
-    <circle cx="150" cy="125" r="105"
+    <!-- Ambient Glow -->
+
+    <circle cx="145"
+            cy="130"
+            r="100"
             fill="#00d9ff"
-            opacity=".08"
-            filter="url(#bigGlow)">
-
-      <animate attributeName="r"
-               values="80;120;80"
-               dur="5s"
-               repeatCount="indefinite"/>
-
-    </circle>
-
-
-    <circle cx="940" cy="135" r="115"
-            fill="#ff4ecd"
             opacity=".07"
-            filter="url(#bigGlow)">
+            filter="url(#softGlow)"/>
 
-      <animate attributeName="cx"
-               values="890;970;890"
-               dur="7s"
-               repeatCount="indefinite"/>
-
-    </circle>
-
-
-    <!-- TECH GRID -->
-
-    <g stroke="#8090c9"
-       stroke-width="1"
-       opacity=".08">
-
-      <path d="M0 40H1100"/>
-      <path d="M0 80H1100"/>
-      <path d="M0 120H1100"/>
-      <path d="M0 160H1100"/>
-      <path d="M0 200H1100"/>
-      <path d="M0 240H1100"/>
-
-      <path d="M40 0V260"/>
-      <path d="M120 0V260"/>
-      <path d="M200 0V260"/>
-      <path d="M280 0V260"/>
-      <path d="M360 0V260"/>
-      <path d="M440 0V260"/>
-      <path d="M520 0V260"/>
-      <path d="M600 0V260"/>
-      <path d="M680 0V260"/>
-      <path d="M760 0V260"/>
-      <path d="M840 0V260"/>
-      <path d="M920 0V260"/>
-      <path d="M1000 0V260"/>
-
-    </g>
+    <circle cx="950"
+            cy="130"
+            r="110"
+            fill="#865cff"
+            opacity=".07"
+            filter="url(#softGlow)"/>
 
 
-    <!-- LEFT OUTLIER DETECTION ICON -->
+    <!-- ================================================= -->
+    <!-- LEFT FEATURE ICON -->
+    <!-- ================================================= -->
 
-    <g transform="translate(135 130)">
+    <g transform="translate(145 130)">
 
       <!-- Orbit -->
 
-      <circle r="73"
+      <circle r="70"
               fill="none"
-              stroke="url(#accent)"
+              stroke="#00e5ff"
               stroke-width="1"
               stroke-dasharray="4 9"
               opacity=".55">
@@ -139,78 +121,62 @@
           type="rotate"
           from="0"
           to="360"
-          dur="15s"
+          dur="16s"
           repeatCount="indefinite"/>
 
       </circle>
 
 
-      <circle r="57"
+      <circle r="55"
               fill="none"
               stroke="#ffffff"
               stroke-opacity=".12"/>
 
 
-      <!-- Main Analytics Circle -->
+      <!-- Main Circle -->
 
-      <circle cx="0"
-              cy="0"
-              r="38"
+      <circle r="36"
               fill="url(#violet)"
               stroke="#bdf7ff"
               stroke-width="2"
               filter="url(#glow)"/>
 
 
-      <circle cx="0"
-              cy="0"
-              r="27"
+      <circle r="25"
               fill="#07102d"
-              opacity=".78"/>
+              opacity=".82"/>
 
 
-      <!-- Scatter Points -->
+      <!-- Network -->
 
-      <circle cx="-14" cy="-8" r="3"
-              fill="#00ffc8"/>
+      <path d="M0 -14
+               L-14 10
+               H14
+               Z"
+            fill="none"
+            stroke="#00e5ff"
+            stroke-width="2.5"/>
 
-      <circle cx="-5" cy="8" r="3"
+
+      <circle cx="0"
+              cy="-14"
+              r="4"
               fill="#00e5ff"/>
 
-      <circle cx="9" cy="-5" r="3"
-              fill="#ffffff"/>
-
-      <circle cx="14" cy="10" r="3"
+      <circle cx="-14"
+              cy="10"
+              r="4"
               fill="#00ffc8"/>
 
-
-      <!-- OUTLIER POINT -->
-
-      <circle cx="28"
-              cy="-27"
-              r="6"
-              fill="url(#danger)"
-              filter="url(#glow)">
-
-        <animate attributeName="r"
-                 values="4;7;4"
-                 dur="1.5s"
-                 repeatCount="indefinite"/>
-
-      </circle>
-
-
-      <!-- Detection Line -->
-
-      <path d="M18 -18L28 -27"
-            stroke="#ff6b8a"
-            stroke-width="2"
-            stroke-dasharray="3 3"/>
+      <circle cx="14"
+              cy="10"
+              r="4"
+              fill="#ffffff"/>
 
 
       <!-- Orbiting Dot -->
 
-      <circle cx="73"
+      <circle cx="70"
               cy="0"
               r="5"
               fill="#00eaff"
@@ -227,17 +193,17 @@
       </circle>
 
 
-      <!-- Alert Spark -->
+      <!-- Spark -->
 
-      <path d="M-55 35
-               L-50 45
-               L-40 50
-               L-50 55
-               L-55 65
-               L-60 55
-               L-70 50
-               L-60 45Z"
-            fill="#ff6b8a"
+      <path d="M-52 38
+               L-47 48
+               L-37 53
+               L-47 58
+               L-52 68
+               L-57 58
+               L-67 53
+               L-57 48Z"
+            fill="#00ffc8"
             filter="url(#glow)">
 
         <animate attributeName="opacity"
@@ -250,308 +216,389 @@
     </g>
 
 
+    <!-- ================================================= -->
     <!-- CENTER CONTENT -->
+    <!-- IMPORTANT: RIGHT CARD STARTS AT X = 790 -->
+    <!-- CENTER CONTENT ENDS BEFORE X = 700 -->
+    <!-- ================================================= -->
 
-    <g transform="translate(275 0)">
+    <g transform="translate(285 0)">
 
-
-      <!-- LABEL -->
+      <!-- Label -->
 
       <rect x="10"
-            y="27"
-            width="205"
+            y="23"
+            width="185"
             height="28"
             rx="14"
             fill="#ffffff"
-            fill-opacity=".045"
-            stroke="#66eaff"
-            stroke-opacity=".3"/>
+            fill-opacity=".04"
+            stroke="#00e5ff"
+            stroke-opacity=".35"/>
 
 
-      <circle cx="28"
-              cy="41"
+      <circle cx="27"
+              cy="37"
               r="4"
-              fill="#ff6b8a"
+              fill="#00ffc8"
               filter="url(#glow)">
 
         <animate attributeName="opacity"
                  values=".3;1;.3"
-                 dur="1.2s"
+                 dur="1.5s"
                  repeatCount="indefinite"/>
 
       </circle>
 
 
-      <text x="42"
-            y="46"
-            font-family="Segoe UI,Arial"
+      <text x="41"
+            y="41"
+            font-family="Segoe UI, Arial, sans-serif"
             font-size="10"
             font-weight="700"
             letter-spacing="2"
             fill="#b9f7ff">
-        DATA QUALITY
+
+        FEATURE PIPELINE
+
       </text>
 
 
-      <!-- MAIN TITLE -->
+      <!-- ================= TITLE ================= -->
 
       <text x="12"
-            y="112"
-            font-family="Segoe UI,Arial,sans-serif"
-            font-size="42"
+            y="101"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="35"
             font-weight="800"
-            fill="#f5fbff">
+            fill="#00d9ff">
 
-        Part D: Outlier Handling
-
-        <animate attributeName="opacity"
-                 values="0;1"
-                 dur="1.2s"
-                 fill="freeze"/>
+        Part E:
 
       </text>
 
 
-      <!-- UNDERLINE -->
+      <text x="12"
+            y="143"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="31"
+            font-weight="800"
+            fill="#f7fbff">
 
-      <rect x="14"
-            y="127"
-            width="405"
+        Feature Engineering
+
+      </text>
+
+
+      <!-- Underline -->
+
+      <rect x="12"
+            y="157"
+            width="390"
             height="3"
             rx="2"
             fill="url(#accent)">
 
         <animate attributeName="width"
-                 values="0;405"
+                 values="0;390"
                  dur="1.3s"
                  fill="freeze"/>
 
       </rect>
 
 
-      <!-- SUBTITLE -->
+      <!-- Pipeline -->
 
-      <text x="15"
-            y="165"
-            font-family="Segoe UI,Arial"
+      <text x="12"
+            y="184"
+            font-family="Segoe UI, Arial, sans-serif"
             font-size="10"
-            letter-spacing="2.5"
-            fill="#6e9bd8">
+            letter-spacing="2.1"
+            fill="#78a7e8">
 
-        DETECT  •  ANALYZE  •  TREAT  •  VALIDATE
+        CREATE • SELECT • TRANSFORM • IMPROVE
 
       </text>
 
 
-      <!-- DATA STREAM -->
+      <!-- Line -->
 
-      <path d="M15 190H410"
-            stroke="#263b69"
-            stroke-width="1"/>
+      <line x1="12"
+            y1="207"
+            x2="390"
+            y2="207"
+            stroke="#30446f"/>
 
 
-      <circle cx="15"
-              cy="190"
-              r="3"
+      <!-- Moving Dot -->
+
+      <circle cx="12"
+              cy="207"
+              r="3.5"
               fill="#ffffff"
               filter="url(#glow)">
 
         <animate attributeName="cx"
-                 values="15;410;15"
+                 values="12;390;12"
                  dur="3.5s"
                  repeatCount="indefinite"/>
 
       </circle>
 
 
-      <!-- STATUS -->
+      <!-- Status -->
 
-      <circle cx="15"
-              cy="215"
-              r="3"
+      <circle cx="12"
+              cy="229"
+              r="3.5"
               fill="#00ffc8"
               filter="url(#glow)"/>
 
-      <text x="27"
-            y="219"
-            font-family="Segoe UI,Arial"
+
+      <text x="24"
+            y="233"
+            font-family="Segoe UI, Arial, sans-serif"
             font-size="9"
+            font-weight="600"
             letter-spacing="1.5"
-            fill="#8dffe9">
-        ANOMALIES UNDER CONTROL
+            fill="#67ffe5">
+
+        FEATURES READY FOR MODELING
+
       </text>
 
     </g>
 
 
-    <!-- RIGHT OUTLIER ANALYTICS PANEL -->
+    <!-- ================================================= -->
+    <!-- RIGHT FEATURE ENGINE CARD -->
+    <!-- ================================================= -->
 
-    <g transform="translate(790 31)">
+    <g transform="translate(790 24)">
 
-      <rect width="275"
-            height="198"
+      <!-- Card -->
+
+      <rect width="285"
+            height="212"
             rx="22"
             fill="#ffffff"
             fill-opacity=".035"
-            stroke="#ff6b8a"
-            stroke-opacity=".25"/>
+            stroke="#8e7aff"
+            stroke-opacity=".3"/>
 
+
+      <!-- Card Title -->
 
       <text x="22"
-            y="30"
-            font-family="Segoe UI,Arial"
+            y="31"
+            font-family="Segoe UI, Arial, sans-serif"
             font-size="10"
             font-weight="700"
             letter-spacing="2"
             fill="#91b8ff">
-        OUTLIER ANALYTICS
+
+        FEATURE ENGINE
+
       </text>
 
 
-      <!-- Box Plot -->
+      <!-- Raw Features -->
 
-      <line x1="35"
-            y1="100"
-            x2="220"
-            y2="100"
-            stroke="#33466f"
-            stroke-width="2"/>
+      <text x="22"
+            y="57"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="8"
+            fill="#7fa7dc">
 
+        RAW FEATURES
 
-      <line x1="55"
-            y1="80"
-            x2="55"
-            y2="120"
-            stroke="#7fa7dc"
-            stroke-width="2"/>
+      </text>
 
 
-      <rect x="75"
-            y="78"
-            width="90"
-            height="44"
-            rx="6"
-            fill="url(#glass)"
+      <!-- X1 -->
+
+      <rect x="22"
+            y="67"
+            width="76"
+            height="31"
+            rx="8"
+            fill="#ffffff"
+            fill-opacity=".04"
+            stroke="#00e5ff"
+            stroke-opacity=".55"/>
+
+
+      <text x="60"
+            y="88"
+            text-anchor="middle"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="12"
+            fill="#00e5ff">
+
+        X₁
+
+      </text>
+
+
+      <!-- X2 -->
+
+      <rect x="22"
+            y="108"
+            width="76"
+            height="31"
+            rx="8"
+            fill="#ffffff"
+            fill-opacity=".04"
             stroke="#7c6cff"
-            stroke-width="1.5"/>
+            stroke-opacity=".55"/>
 
 
-      <line x1="120"
-            y1="78"
-            x2="120"
-            y2="122"
+      <text x="60"
+            y="129"
+            text-anchor="middle"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="12"
+            fill="#b79cff">
+
+        X₂
+
+      </text>
+
+
+      <!-- Connections -->
+
+      <path d="M98 82
+               H128
+               V94
+               H142"
+            fill="none"
+            stroke="#00e5ff"
+            stroke-width="2"
+            stroke-dasharray="5 5"/>
+
+
+      <path d="M98 124
+               H128
+               V108
+               H142"
+            fill="none"
+            stroke="#9a7cff"
+            stroke-width="2"
+            stroke-dasharray="5 5"/>
+
+
+      <!-- Transformation -->
+
+      <circle cx="165"
+              cy="101"
+              r="30"
+              fill="url(#violet)"
+              filter="url(#glow)"/>
+
+
+      <circle cx="165"
+              cy="101"
+              r="21"
+              fill="#09132f"/>
+
+
+      <path d="M165 81
+               L171 91
+               H181
+               L176 101
+               L181 111
+               H171
+               L165 121
+               L159 111
+               H149
+               L154 101
+               L149 91
+               H159Z"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2"/>
+
+
+      <!-- NEW FEATURE -->
+
+      <path d="M195 101
+               H242"
             stroke="#00ffc8"
-            stroke-width="3"/>
-
-
-      <line x1="165"
-            y1="80"
-            x2="165"
-            y2="120"
-            stroke="#7fa7dc"
             stroke-width="2"/>
 
 
-      <!-- Whiskers -->
-
-      <line x1="55"
-            y1="100"
-            x2="75"
-            y2="100"
-            stroke="#7fa7dc"
-            stroke-width="2"/>
-
-      <line x1="165"
-            y1="100"
-            x2="195"
-            y2="100"
-            stroke="#7fa7dc"
-            stroke-width="2"/>
-
-
-      <!-- Outlier -->
-
-      <circle cx="218"
-              cy="100"
-              r="6"
-              fill="url(#danger)"
+      <circle cx="249"
+              cy="101"
+              r="7"
+              fill="#00ffc8"
               filter="url(#glow)">
 
         <animate attributeName="r"
-                 values="4;7;4"
-                 dur="1.4s"
+                 values="5;8;5"
+                 dur="1.7s"
                  repeatCount="indefinite"/>
 
       </circle>
 
 
-      <!-- Labels -->
+      <text x="211"
+            y="84"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="8"
+            letter-spacing="1"
+            fill="#7fa7dc">
+
+        NEW
+
+      </text>
+
+
+      <!-- Feature Quality -->
 
       <text x="22"
-            y="150"
-            font-family="Segoe UI,Arial"
+            y="164"
+            font-family="Segoe UI, Arial, sans-serif"
             font-size="8"
             fill="#7fa7dc">
-        NORMAL RANGE
+
+        FEATURE QUALITY
+
       </text>
 
-      <text x="185"
-            y="150"
-            font-family="Segoe UI,Arial"
-            font-size="8"
-            fill="#ff9aaa">
-        OUTLIER
-      </text>
-
-
-      <!-- Status Bars -->
 
       <rect x="22"
-            y="166"
-            width="190"
-            height="5"
-            rx="3"
+            y="174"
+            width="240"
+            height="7"
+            rx="4"
             fill="#26345d"/>
 
 
       <rect x="22"
-            y="166"
-            width="145"
-            height="5"
-            rx="3"
+            y="174"
+            width="190"
+            height="7"
+            rx="4"
             fill="url(#accent)">
 
         <animate attributeName="width"
-                 values="0;145"
-                 dur="1.7s"
+                 values="0;190"
+                 dur="1.8s"
                  fill="freeze"/>
 
       </rect>
 
 
-      <!-- Floating Particles -->
+      <!-- Floating Dot -->
 
-      <circle cx="245"
+      <circle cx="258"
               cy="45"
               r="2"
               fill="#7eeaff">
 
         <animate attributeName="cy"
-                 values="45;65;45"
+                 values="45;62;45"
                  dur="3s"
-                 repeatCount="indefinite"/>
-
-      </circle>
-
-
-      <circle cx="15"
-              cy="180"
-              r="2"
-              fill="#ff6b8a">
-
-        <animate attributeName="cy"
-                 values="180;160;180"
-                 dur="4s"
                  repeatCount="indefinite"/>
 
       </circle>
@@ -559,35 +606,39 @@
     </g>
 
 
+    <!-- ================================================= -->
     <!-- MOVING SCANNER -->
+    <!-- ================================================= -->
 
-    <rect x="260"
-          y="20"
+    <rect x="265"
+          y="10"
           width="2"
-          height="220"
+          height="240"
           fill="url(#accent)"
-          opacity=".15">
+          opacity=".12">
 
       <animate attributeName="x"
-               values="250;790;250"
+               values="260;785;260"
                dur="7s"
                repeatCount="indefinite"/>
 
     </rect>
 
-
-    <!-- BORDER -->
-
-    <rect x="1.5"
-          y="1.5"
-          width="1097"
-          height="257"
-          rx="19"
-          fill="none"
-          stroke="url(#accent)"
-          stroke-opacity=".3"
-          stroke-width="2"/>
-
   </g>
+
+
+  <!-- ================================================= -->
+  <!-- BORDER -->
+  <!-- ================================================= -->
+
+  <rect x="1.5"
+        y="1.5"
+        width="1097"
+        height="257"
+        rx="19"
+        fill="none"
+        stroke="url(#accent)"
+        stroke-width="2"
+        stroke-opacity=".5"/>
 
 </svg>
