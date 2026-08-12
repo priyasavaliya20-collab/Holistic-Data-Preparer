@@ -6,10 +6,6 @@
 
 
 
-
-
-
-
 ## ♻️ WorkFlow :-
 
 
@@ -68,10 +64,7 @@
 
 ## 📥 Part B: Data Acquisition & Merging
 
-
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/acf585c3-027d-47b7-bbe6-66050103d7b9" />
-
-
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/811dbb22-e8ff-4259-93df-8a3da5603abd" />
 
 
 Loaded four different formats — CSV, JSON, SQL, and API — and merged them into one table.
@@ -99,8 +92,9 @@ data = data.merge(economic_data, on="region", how="left")
 ## 🧼 Part C: Data Understanding & Cleaning
 
 
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/11f03109-fa8a-4942-91dc-463056ab1cb0" />
 
+
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/5775a11a-20c5-4462-ad1b-1bcef7148522" />
 
 
 
@@ -135,7 +129,7 @@ data_complete = data.dropna()   # 1008 → 746 rows (-26%)
 ## 🎯 Part D: Outlier Handling
 
 
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/3a66035c-a3a3-4551-966e-4e2e14976b98" />
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/e0d0359d-b780-4318-9e70-1917e486f5ec" />
 
 
 Compared **three** detection methods and one non-destructive treatment on `annual_income`, `loan_amount`, `credit_score`.
@@ -162,9 +156,7 @@ data_winsor[col] = winsorize(data_winsor[col], limits=[0.01, 0.01], nan_policy="
 
 ## 🛠️ Part E: Feature Engineering
 
-
-
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/7528071a-8a55-44a5-b6bd-5b3ac9991ba3" />
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/e2689e2c-d5e5-4f7d-b407-b7fd663d44db" />
 
 
 **Variable types:** 7 numeric (age, annual_income, loan_amount, credit_score, repayment_history, transaction_count, spending_ratio) + 5 categorical (gender, region, education_level, employment_type, loan_purpose).
@@ -193,7 +185,9 @@ data_kmeans["transaction_cluster"]    = KMeans(n_clusters=4, random_state=42, n_
 ## ⚖️ Part F: Feature Scaling
 
 
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/61dd25e8-22e8-4c6c-ad33-f5555091660b" />
+
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/cd16d196-8bae-44b8-b5a7-0af8253fb44f" />
+
 
 Compared **five** scalers side by side on the 7 numeric columns (after median imputation).
 
@@ -211,9 +205,7 @@ RobustScaler().fit_transform(scaling_data[numeric_columns])     # median/IQR bas
 
 ## 🏗️ Part G: Feature Construction & Transformation
 
-
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/453290fa-11de-4ad6-8059-774bbe29ada3" />
-
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/abc2e674-a25b-41b7-b737-34f6ee086a03" />
 
 
 ```python
@@ -242,8 +234,7 @@ feature_data["spending_to_income_ratio"]     = feature_data["spending_ratio"] / 
 ## 🚀 Part H: Final Deliverable
 
 
-
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/c562bf5b-b958-4cf8-b02a-7c27b720074c" />
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/81faf7cf-27b8-4bf5-80fa-3444182029fd" />
 
 
 ```python
