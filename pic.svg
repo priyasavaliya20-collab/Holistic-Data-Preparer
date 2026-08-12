@@ -60,6 +60,7 @@
               r="1.3"
               fill="#7890c9"
               opacity=".15"/>
+
     </pattern>
 
     <clipPath id="clip">
@@ -107,7 +108,7 @@
 
 
     <!-- ================================================= -->
-    <!-- LEFT TRANSFORMATION ICON -->
+    <!-- LEFT FINAL DELIVERABLE ICON -->
     <!-- ================================================= -->
 
     <g transform="translate(145 130)">
@@ -138,62 +139,66 @@
               stroke-opacity=".12"/>
 
 
-      <!-- Main Engine -->
+      <!-- Main Document -->
 
-      <circle r="36"
-              fill="url(#violet)"
-              stroke="#bdf7ff"
-              stroke-width="2"
-              filter="url(#glow)"/>
-
-      <circle r="26"
-              fill="#07102d"
-              opacity=".85"/>
-
-
-      <!-- INPUT NODES -->
-
-      <circle cx="-16"
-              cy="-13"
-              r="5"
-              fill="#00e5ff"/>
-
-      <circle cx="-16"
-              cy="13"
-              r="5"
-              fill="#00ffc8"/>
+      <rect x="-28"
+            y="-36"
+            width="56"
+            height="72"
+            rx="8"
+            fill="url(#violet)"
+            stroke="#bdf7ff"
+            stroke-width="2"
+            filter="url(#glow)"/>
 
 
-      <!-- OUTPUT NODE -->
+      <rect x="-20"
+            y="-27"
+            width="40"
+            height="54"
+            rx="5"
+            fill="#07102d"
+            opacity=".9"/>
 
-      <circle cx="16"
-              cy="0"
-              r="5"
-              fill="#ffffff"
-              filter="url(#glow)"/>
+
+      <!-- Document Lines -->
+
+      <line x1="-12"
+            y1="-15"
+            x2="12"
+            y2="-15"
+            stroke="#00e5ff"
+            stroke-width="3"
+            stroke-linecap="round"/>
+
+      <line x1="-12"
+            y1="-4"
+            x2="12"
+            y2="-4"
+            stroke="#00ffc8"
+            stroke-width="3"
+            stroke-linecap="round"/>
+
+      <line x1="-12"
+            y1="7"
+            x2="6"
+            y2="7"
+            stroke="#ffffff"
+            stroke-width="3"
+            stroke-linecap="round"/>
 
 
-      <!-- TRANSFORMATION CONNECTIONS -->
+      <!-- Check -->
 
-      <path d="M-11 -13
-               H0
-               L11 0
-
-               M-11 13
-               H0
-               L11 0"
+      <path d="M-12 20
+               L-5 27
+               L12 10"
             fill="none"
-            stroke="#9defff"
-            stroke-width="2"/>
-
-
-      <!-- Center Core -->
-
-      <circle cx="0"
-              cy="0"
-              r="7"
-              fill="#7c6cff"
-              filter="url(#glow)"/>
+            stroke="#00ffc8"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            filter="url(#glow)"/>
 
 
       <!-- Orbit Dot -->
@@ -248,7 +253,7 @@
 
       <rect x="10"
             y="23"
-            width="220"
+            width="205"
             height="28"
             rx="14"
             fill="#ffffff"
@@ -279,7 +284,7 @@
             letter-spacing="2"
             fill="#b9f7ff">
 
-        FEATURE TRANSFORMATION
+        PROJECT COMPLETION
 
       </text>
 
@@ -287,37 +292,25 @@
       <!-- TITLE -->
 
       <text x="12"
-            y="101"
+            y="112"
             font-family="Segoe UI, Arial, sans-serif"
             font-size="35"
             font-weight="800"
             fill="#00d9ff">
 
-        Part G:
+        Part H:
 
       </text>
 
 
       <text x="12"
-            y="143"
+            y="153"
             font-family="Segoe UI, Arial, sans-serif"
-            font-size="27"
+            font-size="34"
             font-weight="800"
             fill="#f7fbff">
 
-        Feature Construction
-
-      </text>
-
-
-      <text x="12"
-            y="174"
-            font-family="Segoe UI, Arial, sans-serif"
-            font-size="27"
-            font-weight="800"
-            fill="#f7fbff">
-
-        &amp; Transformation
+        Final Deliverable
 
       </text>
 
@@ -325,7 +318,7 @@
       <!-- UNDERLINE -->
 
       <rect x="12"
-            y="188"
+            y="168"
             width="390"
             height="3"
             rx="2"
@@ -342,13 +335,13 @@
       <!-- SUBTITLE -->
 
       <text x="12"
-            y="215"
+            y="195"
             font-family="Segoe UI, Arial, sans-serif"
-            font-size="9"
-            letter-spacing="1.8"
+            font-size="9.5"
+            letter-spacing="1.9"
             fill="#78a7e8">
 
-        CREATE • DERIVE • TRANSFORM • OPTIMIZE
+        VALIDATE • DOCUMENT • EXPORT • DELIVER
 
       </text>
 
@@ -356,29 +349,51 @@
       <!-- STATUS -->
 
       <circle cx="12"
-              cy="239"
+              cy="222"
               r="3.5"
               fill="#00ffc8"
               filter="url(#glow)"/>
 
 
       <text x="24"
-            y="243"
+            y="226"
             font-family="Segoe UI, Arial, sans-serif"
-            font-size="8.5"
+            font-size="9"
             font-weight="600"
-            letter-spacing="1.3"
+            letter-spacing="1.4"
             fill="#67ffe5">
 
-        NEW FEATURES READY
+        DATASET READY FOR DELIVERY
 
       </text>
+
+
+      <!-- Moving Progress Dot -->
+
+      <line x1="12"
+            y1="241"
+            x2="390"
+            y2="241"
+            stroke="#30446f"/>
+
+      <circle cx="12"
+              cy="241"
+              r="3"
+              fill="#ffffff"
+              filter="url(#glow)">
+
+        <animate attributeName="cx"
+                 values="12;390;12"
+                 dur="3.5s"
+                 repeatCount="indefinite"/>
+
+      </circle>
 
     </g>
 
 
     <!-- ================================================= -->
-    <!-- RIGHT FEATURE CONSTRUCTION CARD -->
+    <!-- RIGHT FINAL DELIVERY CARD -->
     <!-- ================================================= -->
 
     <g transform="translate(790 24)">
@@ -401,234 +416,291 @@
             letter-spacing="2"
             fill="#91b8ff">
 
-        FEATURE BUILDER
+        DELIVERY PACKAGE
 
       </text>
 
 
-      <!-- INPUT -->
+      <!-- PACKAGE ITEMS -->
 
-      <text x="22"
-            y="57"
-            font-family="Segoe UI, Arial, sans-serif"
-            font-size="8"
-            fill="#7fa7dc">
-
-        INPUT FEATURES
-
-      </text>
-
+      <!-- Dataset -->
 
       <rect x="22"
-            y="67"
-            width="75"
-            height="28"
-            rx="7"
+            y="50"
+            width="108"
+            height="38"
+            rx="9"
             fill="#ffffff"
             fill-opacity=".035"
             stroke="#00e5ff"
-            stroke-opacity=".45"/>
+            stroke-opacity=".35"/>
 
 
-      <text x="59"
-            y="85"
-            text-anchor="middle"
+      <circle cx="42"
+              cy="69"
+              r="10"
+              fill="#00e5ff"
+              opacity=".15"/>
+
+
+      <path d="M36 66H48
+               M36 71H48
+               M36 76H45"
+            stroke="#00e5ff"
+            stroke-width="1.8"
+            stroke-linecap="round"/>
+
+
+      <text x="58"
+            y="67"
             font-family="Segoe UI, Arial, sans-serif"
-            font-size="10"
-            fill="#00e5ff">
+            font-size="8"
+            fill="#9eeeff">
 
-        X₁
+        FINAL DATA
 
       </text>
 
 
-      <rect x="22"
-            y="103"
-            width="75"
-            height="28"
-            rx="7"
+      <text x="58"
+            y="78"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="7"
+            fill="#668cc4">
+
+        CLEAN &amp; READY
+
+      </text>
+
+
+      <!-- Report -->
+
+      <rect x="144"
+            y="50"
+            width="119"
+            height="38"
+            rx="9"
             fill="#ffffff"
             fill-opacity=".035"
             stroke="#7c6cff"
-            stroke-opacity=".45"/>
+            stroke-opacity=".4"/>
 
 
-      <text x="59"
-            y="121"
-            text-anchor="middle"
+      <circle cx="164"
+              cy="69"
+              r="10"
+              fill="#7c6cff"
+              opacity=".15"/>
+
+
+      <rect x="158"
+            y="63"
+            width="12"
+            height="13"
+            rx="2"
+            fill="none"
+            stroke="#a99cff"
+            stroke-width="1.5"/>
+
+
+      <line x1="161"
+            y1="67"
+            x2="167"
+            y2="67"
+            stroke="#a99cff"/>
+
+      <line x1="161"
+            y1="71"
+            x2="167"
+            y2="71"
+            stroke="#a99cff"/>
+
+
+      <text x="180"
+            y="67"
             font-family="Segoe UI, Arial, sans-serif"
-            font-size="10"
-            fill="#b79cff">
+            font-size="8"
+            fill="#c5bbff">
 
-        X₂
+        REPORT
 
       </text>
 
 
-      <!-- FLOW -->
+      <text x="180"
+            y="78"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="7"
+            fill="#668cc4">
 
-      <path d="M97 81
-               H123
-               V94
-               H139"
-            fill="none"
-            stroke="#00e5ff"
-            stroke-width="2"
-            stroke-dasharray="5 5"/>
+        DOCUMENTED
 
-
-      <path d="M97 117
-               H123
-               V106
-               H139"
-            fill="none"
-            stroke="#9a7cff"
-            stroke-width="2"
-            stroke-dasharray="5 5"/>
+      </text>
 
 
-      <!-- TRANSFORMATION CORE -->
+      <!-- Export -->
 
-      <circle cx="162"
-              cy="100"
-              r="30"
-              fill="url(#violet)"
-              filter="url(#glow)"/>
-
-
-      <circle cx="162"
-              cy="100"
-              r="20"
-              fill="#09132f"/>
+      <rect x="22"
+            y="100"
+            width="108"
+            height="38"
+            rx="9"
+            fill="#ffffff"
+            fill-opacity=".035"
+            stroke="#00ffc8"
+            stroke-opacity=".35"/>
 
 
-      <!-- Transformation Symbol -->
-
-      <path d="M162 82
-               C151 82 146 89 146 99
-               C146 110 153 117 162 117
-               C171 117 178 110 178 100"
-            fill="none"
-            stroke="#ffffff"
-            stroke-width="2"/>
+      <circle cx="42"
+              cy="119"
+              r="10"
+              fill="#00ffc8"
+              opacity=".15"/>
 
 
-      <path d="M171 94
-               L178 100
-               L171 106"
+      <path d="M42 111V124
+               M37 119L42 124L47 119
+               M35 127H49"
             fill="none"
             stroke="#00ffc8"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+
+      <text x="58"
+            y="117"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="8"
+            fill="#8dffe9">
+
+        EXPORT
+
+      </text>
+
+
+      <text x="58"
+            y="128"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="7"
+            fill="#668cc4">
+
+        READY
+
+      </text>
+
+
+      <!-- Verification -->
+
+      <rect x="144"
+            y="100"
+            width="119"
+            height="38"
+            rx="9"
+            fill="#ffffff"
+            fill-opacity=".035"
+            stroke="#c56cff"
+            stroke-opacity=".4"/>
+
+
+      <circle cx="164"
+              cy="119"
+              r="10"
+              fill="#c56cff"
+              opacity=".15"/>
+
+
+      <path d="M158 119
+               L162 123
+               L170 114"
+            fill="none"
+            stroke="#d8c4ff"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"/>
 
 
-      <!-- OUTPUT -->
-
-      <path d="M192 100
-               H238"
-            stroke="#00ffc8"
-            stroke-width="2"/>
-
-
-      <circle cx="247"
-              cy="100"
-              r="7"
-              fill="#00ffc8"
-              filter="url(#glow)">
-
-        <animate attributeName="r"
-                 values="5;8;5"
-                 dur="1.7s"
-                 repeatCount="indefinite"/>
-
-      </circle>
-
-
-      <text x="205"
-            y="83"
+      <text x="180"
+            y="117"
             font-family="Segoe UI, Arial, sans-serif"
             font-size="8"
-            letter-spacing="1"
-            fill="#7fa7dc">
+            fill="#d8c4ff">
 
-        NEW
+        VERIFIED
 
       </text>
 
 
-      <!-- FEATURE TYPES -->
+      <text x="180"
+            y="128"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="7"
+            fill="#668cc4">
+
+        QUALITY CHECK
+
+      </text>
+
+
+      <!-- PROGRESS -->
 
       <text x="22"
-            y="157"
+            y="161"
             font-family="Segoe UI, Arial, sans-serif"
             font-size="8"
             fill="#7fa7dc">
 
-        TRANSFORMATIONS
+        DELIVERY STATUS
 
       </text>
 
-
-      <text x="22"
-            y="178"
-            font-family="Segoe UI, Arial, sans-serif"
-            font-size="8.5"
-            fill="#8deaff">
-
-        LOG
-
-      </text>
-
-
-      <text x="62"
-            y="178"
-            font-family="Segoe UI, Arial, sans-serif"
-            font-size="8.5"
-            fill="#c5b9ff">
-
-        SQRT
-
-      </text>
-
-
-      <text x="108"
-            y="178"
-            font-family="Segoe UI, Arial, sans-serif"
-            font-size="8.5"
-            fill="#8dffe9">
-
-        RECIPROCAL
-
-      </text>
-
-
-      <!-- QUALITY BAR -->
 
       <rect x="22"
-            y="191"
+            y="171"
             width="240"
-            height="6"
-            rx="3"
+            height="7"
+            rx="4"
             fill="#26345d"/>
 
 
       <rect x="22"
-            y="191"
-            width="205"
-            height="6"
-            rx="3"
+            y="171"
+            width="228"
+            height="7"
+            rx="4"
             fill="url(#accent)">
 
         <animate attributeName="width"
-                 values="0;205"
-                 dur="1.8s"
+                 values="0;228"
+                 dur="2s"
                  fill="freeze"/>
 
       </rect>
 
 
-      <!-- FLOATING DOT -->
+      <!-- COMPLETE -->
+
+      <circle cx="22"
+              cy="199"
+              r="4"
+              fill="#00ffc8"
+              filter="url(#glow)"/>
+
+
+      <text x="34"
+            y="203"
+            font-family="Segoe UI, Arial, sans-serif"
+            font-size="8.5"
+            font-weight="600"
+            letter-spacing="1.2"
+            fill="#67ffe5">
+
+        COMPLETE &amp; READY
+
+      </text>
+
+
+      <!-- Floating Dot -->
 
       <circle cx="260"
               cy="45"
