@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1100"
-     height="260"
-     viewBox="0 0 1100 260">
+     height="620"
+     viewBox="0 0 1100 620">
 
   <defs>
 
-    <!-- Background -->
+    <!-- ================= BACKGROUND ================= -->
+
     <linearGradient id="bg"
                     x1="0" y1="0"
                     x2="1" y2="1">
@@ -14,7 +15,8 @@
       <stop offset="100%" stop-color="#160b35"/>
     </linearGradient>
 
-    <!-- Main Accent -->
+    <!-- ================= MAIN ACCENT ================= -->
+
     <linearGradient id="cyan"
                     x1="0" y1="0"
                     x2="1" y2="0">
@@ -23,7 +25,8 @@
       <stop offset="100%" stop-color="#00ffc8"/>
     </linearGradient>
 
-    <!-- Violet -->
+    <!-- ================= VIOLET ================= -->
+
     <linearGradient id="violet"
                     x1="0" y1="0"
                     x2="1" y2="1">
@@ -31,7 +34,8 @@
       <stop offset="100%" stop-color="#c56cff"/>
     </linearGradient>
 
-    <!-- Glass -->
+    <!-- ================= GLASS ================= -->
+
     <linearGradient id="glass"
                     x1="0" y1="0"
                     x2="1" y2="1">
@@ -39,9 +43,10 @@
       <stop offset="100%" stop-color="#ffffff" stop-opacity=".025"/>
     </linearGradient>
 
-    <!-- Glow -->
+    <!-- ================= GLOW ================= -->
+
     <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -49,14 +54,15 @@
     </filter>
 
     <filter id="bigGlow">
-      <feGaussianBlur stdDeviation="22"/>
+      <feGaussianBlur stdDeviation="25"/>
     </filter>
 
-    <!-- Clip -->
+    <!-- ================= CLIP ================= -->
+
     <clipPath id="clip">
       <rect width="1100"
-            height="260"
-            rx="18"/>
+            height="620"
+            rx="22"/>
     </clipPath>
 
   </defs>
@@ -67,38 +73,42 @@
   <!-- ================================================= -->
 
   <rect width="1100"
-        height="260"
-        rx="18"
+        height="620"
+        rx="22"
         fill="url(#bg)"/>
+
 
   <g clip-path="url(#clip)">
 
 
-    <!-- Ambient Glow -->
-    <circle cx="180"
+    <!-- ================================================= -->
+    <!-- AMBIENT GLOWS -->
+    <!-- ================================================= -->
+
+    <circle cx="150"
             cy="120"
-            r="100"
+            r="120"
             fill="#00d9ff"
-            opacity=".08"
+            opacity=".07"
             filter="url(#bigGlow)">
 
       <animate attributeName="r"
-               values="80;120;80"
+               values="90;135;90"
                dur="5s"
                repeatCount="indefinite"/>
 
     </circle>
 
 
-    <circle cx="900"
-            cy="150"
-            r="110"
+    <circle cx="930"
+            cy="470"
+            r="130"
             fill="#8a5cff"
-            opacity=".10"
+            opacity=".09"
             filter="url(#bigGlow)">
 
       <animate attributeName="cx"
-               values="850;940;850"
+               values="880;970;880"
                dur="7s"
                repeatCount="indefinite"/>
 
@@ -111,575 +121,824 @@
 
     <g stroke="#8090c9"
        stroke-width="1"
-       opacity=".09">
+       opacity=".08">
 
-      <path d="M0 40H1100"/>
-      <path d="M0 80H1100"/>
+      <path d="M0 60H1100"/>
       <path d="M0 120H1100"/>
-      <path d="M0 160H1100"/>
-      <path d="M0 200H1100"/>
+      <path d="M0 180H1100"/>
       <path d="M0 240H1100"/>
+      <path d="M0 300H1100"/>
+      <path d="M0 360H1100"/>
+      <path d="M0 420H1100"/>
+      <path d="M0 480H1100"/>
+      <path d="M0 540H1100"/>
 
-      <path d="M40 0V260"/>
-      <path d="M120 0V260"/>
-      <path d="M200 0V260"/>
-      <path d="M280 0V260"/>
-      <path d="M360 0V260"/>
-      <path d="M440 0V260"/>
-      <path d="M520 0V260"/>
-      <path d="M600 0V260"/>
-      <path d="M680 0V260"/>
-      <path d="M760 0V260"/>
-      <path d="M840 0V260"/>
-      <path d="M920 0V260"/>
-      <path d="M1000 0V260"/>
-
-    </g>
-
-
-    <!-- ================================================= -->
-    <!-- LEFT GLASS PANEL -->
-    <!-- ================================================= -->
-
-    <rect x="25"
-          y="25"
-          width="220"
-          height="210"
-          rx="22"
-          fill="url(#glass)"
-          stroke="#54ddff"
-          stroke-opacity=".25"/>
-
-
-    <!-- Animated Orbit -->
-    <g transform="translate(135 130)">
-
-      <circle r="74"
-              fill="none"
-              stroke="url(#cyan)"
-              stroke-width="1"
-              stroke-dasharray="4 9"
-              opacity=".55">
-
-        <animateTransform
-          attributeName="transform"
-          type="rotate"
-          from="0"
-          to="360"
-          dur="15s"
-          repeatCount="indefinite"/>
-
-      </circle>
-
-
-      <circle r="58"
-              fill="none"
-              stroke="#ffffff"
-              stroke-opacity=".12"
-              stroke-width="1"/>
-
-
-      <!-- Orbiting Dot -->
-      <circle cx="74"
-              cy="0"
-              r="5"
-              fill="#00eaff"
-              filter="url(#glow)">
-
-        <animateTransform
-          attributeName="transform"
-          type="rotate"
-          from="0"
-          to="360"
-          dur="5s"
-          repeatCount="indefinite"/>
-
-      </circle>
-
-
-      <!-- Shield -->
-      <path
-        d="M0-48
-           L38-32
-           L34 10
-           C30 34 14 49 0 58
-           C-14 49-30 34-34 10
-           L-38-32 Z"
-        fill="url(#violet)"
-        stroke="#bdf7ff"
-        stroke-width="2"
-        filter="url(#glow)">
-
-        <animate
-          attributeName="opacity"
-          values=".85;1;.85"
-          dur="2.5s"
-          repeatCount="indefinite"/>
-
-      </path>
-
-
-      <!-- Shield Inner -->
-      <path
-        d="M0-35
-           L27-23
-           L24 8
-           C21 26 9 37 0 43
-           C-9 37-21 26-24 8
-           L-27-23 Z"
-        fill="#07102d"
-        opacity=".65"/>
-
-
-      <!-- Check -->
-      <path
-        d="M-18 2
-           L-5 15
-           L21-15"
-        fill="none"
-        stroke="#ffffff"
-        stroke-width="6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-dasharray="70"
-        stroke-dashoffset="70">
-
-        <animate
-          attributeName="stroke-dashoffset"
-          values="70;0;0;70"
-          keyTimes="0;.3;.75;1"
-          dur="3s"
-          repeatCount="indefinite"/>
-
-      </path>
+      <path d="M50 0V620"/>
+      <path d="M150 0V620"/>
+      <path d="M250 0V620"/>
+      <path d="M350 0V620"/>
+      <path d="M450 0V620"/>
+      <path d="M550 0V620"/>
+      <path d="M650 0V620"/>
+      <path d="M750 0V620"/>
+      <path d="M850 0V620"/>
+      <path d="M950 0V620"/>
+      <path d="M1050 0V620"/>
 
     </g>
 
 
-    <!-- Small Label -->
-    <text x="135"
-          y="214"
-          text-anchor="middle"
-          font-family="Segoe UI,Arial"
-          font-size="10"
-          letter-spacing="3"
-          fill="#8deaff"
-          opacity=".8">
-      SECURE DATA
-    </text>
-
-
     <!-- ================================================= -->
-    <!-- CENTER CONTENT -->
+    <!-- HEADER -->
     <!-- ================================================= -->
 
-    <g transform="translate(275 0)">
-
-
-      <!-- Small Top Tag -->
-      <g>
-
-        <rect x="10"
-              y="27"
-              width="150"
-              height="27"
-              rx="13"
-              fill="#ffffff"
-              fill-opacity=".045"
-              stroke="#66eaff"
-              stroke-opacity=".3"/>
-
-        <circle cx="28"
-                cy="40.5"
-                r="4"
-                fill="#00ffc8"
-                filter="url(#glow)">
-
-          <animate
-            attributeName="opacity"
-            values=".3;1;.3"
-            dur="1.5s"
-            repeatCount="indefinite"/>
-
-        </circle>
-
-        <text x="42"
-              y="45"
-              font-family="Segoe UI,Arial"
-              font-size="10"
-              font-weight="700"
-              letter-spacing="1.8"
-              fill="#b9f7ff">
-          DATA INTELLIGENCE
-        </text>
-
-      </g>
-
-
-      <!-- Main Title -->
-      <text x="12"
-            y="105"
-            font-family="Segoe UI,Arial,sans-serif"
-            font-size="43"
-            font-weight="800"
-            letter-spacing=".3"
-            fill="#f5fbff">
-
-        Customer Credit Risk
-
-        <animate
-          attributeName="opacity"
-          values="0;1"
-          dur="1.2s"
-          fill="freeze"/>
-
-      </text>
-
-
-      <!-- Gradient Accent Underline -->
-      <rect x="14"
-            y="120"
-            width="400"
-            height="3"
-            rx="2"
-            fill="url(#cyan)"
-            opacity=".9">
-
-        <animate
-          attributeName="width"
-          values="0;400"
-          dur="1.3s"
-          fill="freeze"/>
-
-      </rect>
-
-
-      <!-- Subtitle -->
-      <text x="15"
-            y="160"
-            font-family="Segoe UI,Arial,sans-serif"
-            font-size="24"
-            font-weight="600"
-            fill="#cbd9ff">
-
-        Holistic Data Preparer
-
-        <animate
-          attributeName="opacity"
-          values="0;1"
-          dur="2s"
-          fill="freeze"/>
-
-      </text>
-
-
-      <!-- Data Stream -->
-      <g transform="translate(15 193)">
-
-        <text x="0"
-              y="0"
-              font-family="Segoe UI,Arial"
-              font-size="9"
-              letter-spacing="2"
-              fill="#6e9bd8">
-          ANALYZE
-        </text>
-
-        <text x="83"
-              y="0"
-              font-family="Segoe UI,Arial"
-              font-size="9"
-              letter-spacing="2"
-              fill="#6e9bd8">
-          PREPARE
-        </text>
-
-        <text x="177"
-              y="0"
-              font-family="Segoe UI,Arial"
-              font-size="9"
-              letter-spacing="2"
-              fill="#6e9bd8">
-          PREDICT
-        </text>
-
-
-        <path d="M0 12H260"
-              stroke="#5273a8"
-              stroke-width="1"/>
-
-
-        <circle cx="0"
-                cy="12"
-                r="4"
-                fill="#00eaff"
-                filter="url(#glow)"/>
-
-        <circle cx="128"
-                cy="12"
-                r="4"
-                fill="#8d7cff"
-                filter="url(#glow)"/>
-
-        <circle cx="260"
-                cy="12"
-                r="4"
-                fill="#00ffc8"
-                filter="url(#glow)"/>
-
-
-        <!-- Moving Pulse -->
-        <circle cx="0"
-                cy="12"
-                r="3"
-                fill="white">
-
-          <animate
-            attributeName="cx"
-            values="0;128;260;0"
-            dur="3.5s"
-            repeatCount="indefinite"/>
-
-        </circle>
-
-      </g>
-
-    </g>
-
-
-    <!-- ================================================= -->
-    <!-- RIGHT ANALYTICS PANEL -->
-    <!-- ================================================= -->
-
-    <g transform="translate(800 31)">
+    <g transform="translate(55 30)">
 
       <rect x="0"
             y="0"
-            width="275"
-            height="198"
-            rx="22"
+            width="235"
+            height="30"
+            rx="15"
             fill="#ffffff"
-            fill-opacity=".035"
-            stroke="#8e7aff"
-            stroke-opacity=".25"/>
+            fill-opacity=".045"
+            stroke="#66eaff"
+            stroke-opacity=".3"/>
 
+      <circle cx="20"
+              cy="15"
+              r="4"
+              fill="#00ffc8"
+              filter="url(#glow)">
 
-      <!-- Panel Header -->
-      <text x="22"
-            y="29"
+        <animate attributeName="opacity"
+                 values=".3;1;.3"
+                 dur="1.5s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+      <text x="34"
+            y="20"
             font-family="Segoe UI,Arial"
             font-size="10"
             font-weight="700"
             letter-spacing="2"
-            fill="#91b8ff">
-        RISK ANALYTICS
+            fill="#b9f7ff">
+        DATA PREPROCESSING
       </text>
 
-
-      <!-- Circular Risk Gauge -->
-      <g transform="translate(75 104)">
-
-        <circle r="47"
-                fill="none"
-                stroke="#26345d"
-                stroke-width="8"/>
-
-        <circle r="47"
-                fill="none"
-                stroke="url(#cyan)"
-                stroke-width="8"
-                stroke-linecap="round"
-                stroke-dasharray="295"
-                stroke-dashoffset="95"
-                transform="rotate(-90)"
-                filter="url(#glow)">
-
-          <animate
-            attributeName="stroke-dashoffset"
-            values="295;95;95"
-            dur="2s"
-            fill="freeze"/>
-
-        </circle>
+    </g>
 
 
-        <text x="0"
-              y="-2"
-              text-anchor="middle"
-              font-family="Segoe UI,Arial"
-              font-size="21"
-              font-weight="800"
-              fill="#ffffff">
-          68%
-        </text>
+    <text x="55"
+          y="105"
+          font-family="Segoe UI,Arial,sans-serif"
+          font-size="34"
+          font-weight="800"
+          fill="#f5fbff">
 
-        <text x="0"
-              y="16"
-              text-anchor="middle"
-              font-family="Segoe UI,Arial"
-              font-size="8"
-              letter-spacing="1"
-              fill="#82a8dc">
-          RISK SCORE
-        </text>
+      Data Preparation Workflow
 
-      </g>
+      <animate attributeName="opacity"
+               values="0;1"
+               dur="1.2s"
+               fill="freeze"/>
+
+    </text>
 
 
-      <!-- Mini Data Bars -->
-      <g transform="translate(142 68)">
+    <rect x="57"
+          y="120"
+          width="360"
+          height="3"
+          rx="2"
+          fill="url(#cyan)">
 
-        <text x="0"
-              y="0"
-              font-family="Segoe UI,Arial"
-              font-size="8"
-              fill="#7fa7dc">
-          CREDIT
-        </text>
+      <animate attributeName="width"
+               values="0;360"
+               dur="1.2s"
+               fill="freeze"/>
 
-        <rect x="0"
-              y="8"
-              width="105"
-              height="5"
-              rx="3"
-              fill="#25345c"/>
-
-        <rect x="0"
-              y="8"
-              width="78"
-              height="5"
-              rx="3"
-              fill="url(#cyan)">
-
-          <animate
-            attributeName="width"
-            values="0;78"
-            dur="1.5s"
-            fill="freeze"/>
-
-        </rect>
+    </rect>
 
 
-        <text x="0"
-              y="40"
-              font-family="Segoe UI,Arial"
-              font-size="8"
-              fill="#7fa7dc">
-          INCOME
-        </text>
+    <!-- ================================================= -->
+    <!-- WORKFLOW CONNECTION LINE -->
+    <!-- ================================================= -->
 
-        <rect x="0"
-              y="48"
-              width="105"
-              height="5"
-              rx="3"
-              fill="#25345c"/>
+    <path d="M150 270
+             H950"
+          fill="none"
+          stroke="#3d527f"
+          stroke-width="2"
+          stroke-dasharray="5 8"
+          opacity=".5"/>
 
-        <rect x="0"
-              y="48"
-              width="91"
-              height="5"
-              rx="3"
-              fill="url(#violet)">
-
-          <animate
-            attributeName="width"
-            values="0;91"
-            dur="1.7s"
-            fill="freeze"/>
-
-        </rect>
+    <path d="M150 450
+             H950"
+          fill="none"
+          stroke="#3d527f"
+          stroke-width="2"
+          stroke-dasharray="5 8"
+          opacity=".5"/>
 
 
-        <text x="0"
-              y="80"
-              font-family="Segoe UI,Arial"
-              font-size="8"
-              fill="#7fa7dc">
-          PAYMENT
-        </text>
+    <!-- ================================================= -->
+    <!-- STEP 01 -->
+    <!-- ================================================= -->
 
-        <rect x="0"
-              y="88"
-              width="105"
-              height="5"
-              rx="3"
-              fill="#25345c"/>
+    <g transform="translate(55 155)">
 
-        <rect x="0"
-              y="88"
-              width="64"
-              height="5"
-              rx="3"
+      <rect width="230"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#00e5ff"
+            stroke-opacity=".28"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="url(#cyan)"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#ffffff">
+        01
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#8deaff">
+        FOUNDATION
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Conceptual
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Foundation
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Understand the ML workflow
+      </text>
+
+      <circle cx="202"
+              cy="126"
+              r="3"
               fill="#00ffc8">
 
-          <animate
-            attributeName="width"
-            values="0;64"
-            dur="1.9s"
-            fill="freeze"/>
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="1.8s"
+                 repeatCount="indefinite"/>
 
-        </rect>
-
-      </g>
-
-
-      <!-- Floating Particles -->
-      <g fill="#7eeaff">
-
-        <circle cx="22" cy="165" r="2">
-          <animate
-            attributeName="cy"
-            values="165;145;165"
-            dur="3s"
-            repeatCount="indefinite"/>
-        </circle>
-
-        <circle cx="250" cy="150" r="2">
-          <animate
-            attributeName="cy"
-            values="150;125;150"
-            dur="4s"
-            repeatCount="indefinite"/>
-        </circle>
-
-      </g>
+      </circle>
 
     </g>
 
 
     <!-- ================================================= -->
-    <!-- MOVING SCANNER -->
+    <!-- STEP 02 -->
     <!-- ================================================= -->
 
-    <rect x="260"
-          y="20"
-          width="2"
-          height="220"
-          fill="url(#cyan)"
-          opacity=".15">
+    <g transform="translate(305 155)">
 
-      <animate
-        attributeName="x"
-        values="250;790;250"
-        dur="7s"
-        repeatCount="indefinite"/>
+      <rect width="230"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#7c6cff"
+            stroke-opacity=".32"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="url(#violet)"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#ffffff">
+        02
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#c9c1ff">
+        SOURCE
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Data
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Acquisition
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Collect data from sources
+      </text>
+
+      <circle cx="202"
+              cy="126"
+              r="3"
+              fill="#00e5ff">
+
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="2s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 03 -->
+    <!-- ================================================= -->
+
+    <g transform="translate(555 155)">
+
+      <rect width="230"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#00ffc8"
+            stroke-opacity=".30"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="#00ffc8"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#07102d">
+        03
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#8dffe9">
+        CLEAN
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Data Understanding
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        &amp; Cleaning
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Missing values • duplicates
+      </text>
+
+      <circle cx="202"
+              cy="126"
+              r="3"
+              fill="#7c6cff">
+
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="1.6s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 04 -->
+    <!-- ================================================= -->
+
+    <g transform="translate(805 155)">
+
+      <rect width="240"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#00e5ff"
+            stroke-opacity=".28"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="url(#cyan)"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#ffffff">
+        04
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#8deaff">
+        DETECT
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Outlier
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Handling
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Detect • analyze • treat
+      </text>
+
+      <circle cx="212"
+              cy="126"
+              r="3"
+              fill="#00ffc8">
+
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="2.2s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 05 -->
+    <!-- ================================================= -->
+
+    <g transform="translate(55 345)">
+
+      <rect width="230"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#7c6cff"
+            stroke-opacity=".32"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="url(#violet)"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#ffffff">
+        05
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#c9c1ff">
+        ENGINEER
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Feature
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Engineering
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Create useful model features
+      </text>
+
+      <circle cx="202"
+              cy="126"
+              r="3"
+              fill="#00e5ff">
+
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="1.7s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 06 -->
+    <!-- ================================================= -->
+
+    <g transform="translate(305 345)">
+
+      <rect width="230"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#00ffc8"
+            stroke-opacity=".30"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="#00ffc8"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#07102d">
+        06
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#8dffe9">
+        SCALE
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Feature
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Scaling
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Standardization • Normalization
+      </text>
+
+      <circle cx="202"
+              cy="126"
+              r="3"
+              fill="#7c6cff">
+
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="1.9s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 07 -->
+    <!-- ================================================= -->
+
+    <g transform="translate(555 345)">
+
+      <rect width="230"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#00e5ff"
+            stroke-opacity=".30"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="url(#cyan)"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#ffffff">
+        07
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#8deaff">
+        TRANSFORM
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="15"
+            font-weight="700"
+            fill="#ffffff">
+        Feature Construction
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="15"
+            font-weight="700"
+            fill="#ffffff">
+        &amp; Transformation
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Log • Root • Reciprocal
+      </text>
+
+      <circle cx="202"
+              cy="126"
+              r="3"
+              fill="#00ffc8">
+
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="2.1s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 08 -->
+    <!-- ================================================= -->
+
+    <g transform="translate(805 345)">
+
+      <rect width="240"
+            height="150"
+            rx="20"
+            fill="url(#glass)"
+            stroke="#7c6cff"
+            stroke-opacity=".34"/>
+
+      <circle cx="32"
+              cy="32"
+              r="17"
+              fill="url(#violet)"
+              filter="url(#glow)"/>
+
+      <text x="32"
+            y="37"
+            text-anchor="middle"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="800"
+            fill="#ffffff">
+        08
+      </text>
+
+      <text x="62"
+            y="37"
+            font-family="Segoe UI,Arial"
+            font-size="13"
+            font-weight="700"
+            fill="#c9c1ff">
+        OUTPUT
+      </text>
+
+      <text x="22"
+            y="75"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Final
+      </text>
+
+      <text x="22"
+            y="98"
+            font-family="Segoe UI,Arial"
+            font-size="16"
+            font-weight="700"
+            fill="#ffffff">
+        Deliverable
+      </text>
+
+      <text x="22"
+            y="125"
+            font-family="Segoe UI,Arial"
+            font-size="10"
+            fill="#819dcc">
+        Ready-to-use final dataset
+      </text>
+
+      <circle cx="212"
+              cy="126"
+              r="3"
+              fill="#00ffc8">
+
+        <animate attributeName="opacity"
+                 values=".2;1;.2"
+                 dur="1.5s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================= -->
+    <!-- ANIMATED SCANNER -->
+    <!-- ================================================= -->
+
+    <rect x="40"
+          y="145"
+          width="2"
+          height="365"
+          fill="url(#cyan)"
+          opacity=".18">
+
+      <animate attributeName="x"
+               values="40;1060;40"
+               dur="8s"
+               repeatCount="indefinite"/>
 
     </rect>
+
+
+    <!-- ================================================= -->
+    <!-- MOVING WORKFLOW PULSE -->
+    <!-- ================================================= -->
+
+    <circle cx="55"
+            cy="270"
+            r="4"
+            fill="#ffffff"
+            filter="url(#glow)">
+
+      <animate attributeName="cx"
+               values="55;285;535;785;1045;785;535;285;55"
+               dur="8s"
+               repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <text x="550"
+          y="555"
+          text-anchor="middle"
+          font-family="Segoe UI,Arial"
+          font-size="10"
+          letter-spacing="3"
+          fill="#6e9bd8">
+      ANALYZE • CLEAN • ENGINEER • TRANSFORM • DELIVER
+    </text>
 
 
     <!-- ================================================= -->
     <!-- BORDER -->
     <!-- ================================================= -->
 
-    <rect x="1.5"
-          y="1.5"
-          width="1097"
-          height="257"
-          rx="17"
+    <rect x="2"
+          y="2"
+          width="1096"
+          height="616"
+          rx="21"
           fill="none"
           stroke="url(#cyan)"
-          stroke-opacity=".3"
+          stroke-opacity=".30"
           stroke-width="2"/>
 
   </g>
