@@ -1,5 +1,4 @@
-
-<img width="1100" height="220" alt="pic" src="https://github.com/user-attachments/assets/f4505bd2-1de1-4609-b0c5-2b5cf4307230" />
+<img width="1100" height="260" alt="pic" src="https://github.com/user-attachments/assets/191a96eb-4b66-445d-8bc5-f753cc55a17c" />
 
 ## 🎯 Objective
 
